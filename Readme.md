@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Александр Волков](https://up.htmlacademy.ru/htmlcss-individual/2/user/2657291).
-* Наставник: `Неизвестно`.
+* Наставник: [Вячеслав Ниолаев](https://htmlacademy.ru/profile/slavka_piyavka).
 
 ---
 
