@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -42,25 +42,26 @@
         <li class="navigation-item">
           <a href="#" class="navigation-link">
             <span class="visually-hidden">
-              Хочу сюда
+              12
             </span>
           </a>
         </li>
       </ul>
+      <a href="#" class="navigation-link">Хочу сюда</a>
     </nav>
   </header>
 
   <main class="main-inner">
     <header class="inner-header">
-      <h1 class="inner-header-title">Гостиницы г. Седона</h1>
-      <ul class="breadcrumbs">
+      <h1 class="inner-header-title">Гостиницы Седоны</h1>
+      <ol class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link visually-hidden" href="index.html">Главная</a>
         </li>
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link">Гостиницы</a>
         </li>
-      </ul>
+      </ol>
     </header>
 
     <section class="catalog-services">
@@ -112,28 +113,47 @@
             </li>
           </ul>
         </fieldset>
+
+        <fieldset class="catalog-filter-group">
+          <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+          <label class="control">
+            <input class="control-input" type="text" name="price-from" placeholder="0">
+            от
+          </label>
+          <label class="control">
+            <input class="control-input" type="text" name="price-from" placeholder="9000">
+            до
+          </label>
+        </fieldset>
         <button class="button button-blue" type="submit">Применить</button>
-        <button class="button button-blue" type="submit">Сбросить</button>
+        <button class="button button-blue" type="reset">Сбросить</button>
       </form>
     </section>
 
-    <section class="Sorting">
-      <h2 class="visually-hidden">Раздел с выбором услуг</h2>
-      <p class="Sorting-search">Найдено гостиниц: 38</p>
+    <section class="sorting">
+      <h2 class="sorting-search-title">Найдено гостиниц: 38</h2>
       <select class="select-control" aria-label="Сортировка">
         <option value="popular">Сначала популярные</option>
         <option value="cheap" selected>Сначала дешёвые</option>
         <option value="expensive">Сначала дорогие</option>
       </select>
-      <a class="button" href="#">
-        <span class="visually-hidden">Показать карточки</span>
-      </a>
-      <a href="#" class="button">
-        <span class="visually-hidden">Показать карточку</span>
-      </a>
-      <a href="#" class="button">
-        <span class="visually-hidden">Показать список</span>
-      </a>
+      <ul class="sorting-controls ">
+        <li class="sorting-controls-item">
+          <a class="button" href="#">
+            <span class="visually-hidden">Показать карточки</span>
+          </a>
+        </li>
+        <li class="sorting-controls-item"></li>
+          <a href="#" class="button">
+            <span class="visually-hidden">Показать карточку</span>
+          </a>
+        </li>
+        <li class="sorting-controls-item"></li>
+          <a href="#" class="button">
+            <span class="visually-hidden">Показать список</span>
+          </a>
+        </li>
+      </ul>
       <ul class="product-list">
         <li class="product-card">
           <a class="product-card-link" href="#">
@@ -143,7 +163,7 @@
           <p>Гостиница</p>
           <span class="product-card-price">От 4000 ₽</span>
           <a class="product-card-button button" href="#">Подробнее</a>
-          <button class="product-card-button-favourites">В избранное</button>
+          <button class="product-card-button-favourites" type="button">В избранное</button>
           <p class="rating">Рейтинг: 8,5</p>
         </li>
         <li class="product-card">
@@ -209,7 +229,6 @@
       <p class="subscribe-title">Подпишитесь на рассылку</p>
       <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form action="https://echo.htmlacademy.ru/" method="post" class="subscribe-form">
-        <label for="subscribe-email">Email</label>
         <input class="subscribe-field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email"
           required>
         <button class="button subscribe-button" type="submit">Подписаться</button>
