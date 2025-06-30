@@ -38,13 +38,12 @@ body {
 }
 
 .promo-picture {
-  text-align: center;
   padding: 51px 72px;
   background-image: url("../images/lower-border.svg"), url("../images/promo-gory.jpg");
   background-repeat: no-repeat;
   background-position: bottom, top;
   background-size: 100% auto, cover;
-  background-color: rgb(121, 156, 217);
+  background-color: 82B3D3;
   margin-bottom: 69px;
 }
 
@@ -77,6 +76,14 @@ body {
   text-transform: uppercase;
 }
 
+.subtitle-light {
+  color: #FFFFFF;
+}
+
+.advantages-description-light {
+  color: #FFFFFF;
+}
+
 .advantages-list-item {
   background-color: #FFFFFF;
 }
@@ -86,7 +93,8 @@ body {
 }
 
 .advantages-list-item-center {
-  background-color: rgba(131, 179, 211, 0.2);
+  background-color: #83B3D3;    /*Как можно заменить прозрачность фона без RGBA?*/
+
 }
 
 .services-list {
@@ -95,7 +103,7 @@ body {
 }
 
 .services-list-item {
-  background-color: rgba(131, 179, 211, 0.12);
+  background-color: #83B3D3;   /*Как можно заменить прозрачность фона без RGBA?*/
 }
 
 .services-list-item-center {
@@ -123,7 +131,7 @@ a {
 }
 
 .subscribe {
-  background-color: rgb(121, 156, 217);
+  background-color: #83B3D3;
   background-image: url("../images/Subscribe.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,7 +141,7 @@ a {
   color: #FFFFFF;
 }
 
-.subscribe-text {
+.subscribe-description {
   font-size: 22px;
   line-height: 26px;
   color: #FFFFFF;
@@ -249,7 +257,7 @@ a {
 
 .subscribe-text {
   text-align: center;
-  color: 22px;
+  font-size: 22px;
   line-height: 26px;
   color: #333333;
 }
