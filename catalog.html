@@ -52,7 +52,7 @@
     </nav>
   </header>
 
-  <main class="main-inner">
+  <main class="main-inner main-container">
     <header class="inner-header">
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
       <ol class="breadcrumbs">
@@ -133,29 +133,32 @@
 
 
     <section class="sorting" data-test="catalog">
-      <h2 class="sorting-search-title">Найдено гостиниц: 38</h2>
-      <select class="select-control" aria-label="Сортировка">
-        <option value="popular">Сначала популярные</option>
-        <option value="cheap" selected>Сначала дешёвые</option>
-        <option value="expensive">Сначала дорогие</option>
-      </select>
-      <ul class="sorting-controls ">
-        <li class="sorting-controls-item">
-          <a class="button" href="#">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-        </li>
-        <li class="sorting-controls-item"></li>
-          <a href="#" class="button">
-            <span class="visually-hidden">Показать карточку</span>
-          </a>
-        </li>
-        <li class="sorting-controls-item"></li>
-          <a href="#" class="button">
-            <span class="visually-hidden">Показать список</span>
-          </a>
-        </li>
-      </ul>
+      <div class="sorting-header">
+        <h2 class="sorting-search-title">Найдено гостиниц: 38</h2>
+        <select class="select-control" aria-label="Сортировка">
+          <option value="popular">Сначала популярные</option>
+          <option value="cheap" selected>Сначала дешёвые</option>
+          <option value="expensive">Сначала дорогие</option>
+        </select>
+        <ul class="sorting-controls ">
+          <li class="sorting-controls-item">
+            <a class="button" href="#">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+          </li>
+          <li class="sorting-controls-item"></li>
+            <a href="#" class="button">
+              <span class="visually-hidden">Показать карточку</span>
+            </a>
+          </li>
+          <li class="sorting-controls-item"></li>
+            <a href="#" class="button">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <ul class="product-list">
         <li class="product-card">
           <a class="product-card-link" href="#">
@@ -237,35 +240,37 @@
     </section>
   </main>
 
-  <footer class="catalog-footer" data-test="footer">
-    <div class="footer-social">
-      <ul class="footer-social-list">
-        <li class="footer-social-item">
-          <a class="button" href="#">
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a class="button" href="#">
-            <span class="visually-hidden">Телеграмм</span>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a class="button" href="#">
-            <span class="visually-hidden">Ютуб</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+  <footer class="main-footer" data-test="footer">
+    <div class="page-footer-container">
+      <div class="footer-social">
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a class="button" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="button" href="#">
+              <span class="visually-hidden">Телеграмм</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="button" href="#">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-    <div class="footer-phone">
-      <a href="tel:+78128121212" class="footer-phone-link">+7 (812) 812-12-12</a>
-    </div>
+      <div class="footer-phone">
+        <a href="tel:+78128121212" class="footer-phone-link">+7 (812) 812-12-12</a>
+      </div>
 
-    <div class="footer-logo">
-      <a href="#" class="footer-logo-link">
-        <img src="images/HTML Academy.svg" width="115" height="33" alt="Логотип HTML Академии">
-      </a>
+      <div class="footer-logo">
+        <a href="#" class="footer-logo-link">
+          <img src="images/HTML Academy.svg" width="115" heigth="33" alt="Логотип HTML Академии">
+        </a>
+      </div>
     </div>
   </footer>
 </body>
