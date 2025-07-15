@@ -29,6 +29,10 @@ html {
   height: 100%;
 }
 
+img {
+  display: block;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -41,8 +45,8 @@ body {
   color: #333333;
 }
 
-.main-container {
-  width: 1200px;
+.container {
+  max-width: 1200px;
   margin: 0 auto;
   flex-grow: 1;
 }
@@ -50,13 +54,21 @@ body {
 .main-header {
   color: #000000;
   background-color: #FFFFFF;
+  height: 64px;
 }
 
 .navigation {
   display: flex;
-  width: 1060px;
+  width: 1200px;
   margin: 0 auto;
-  align-items: flex-start;
+  align-items: center;
+  padding: 0 70px;
+}
+
+.navigation-logo {
+  margin-right: 30px;
+  display: block;
+  z-index: 1;
 }
 
 .navigation-list {
@@ -66,19 +78,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-}
-
-.navigation-user {
-  width: 90px;
-  margin-left: auto;
-}
-
-.navigation-user .navigation-link {
-  min-width: 45px;
-}
-
-.navigation-logo {
-  margin-right: 30px;
 }
 
 .navigation-link {
@@ -93,6 +92,33 @@ body {
   color: #000000;
 }
 
+.navigation-user {
+  width: fit-content;
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+.navigation-user .navigation-link {
+  min-width: 45px;
+}
+
+.header-button {
+  display: inline-block;
+  background-color: #756157;
+  border-radius: 4px;
+  padding: 8px 34px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 14px 140px 14px 0;
+}
+
+
+/*main*/
+
 .page-container {
   width: 1200px;
   margin: 0 auto;
@@ -106,8 +132,11 @@ body {
   background-position: bottom, top;
   background-size: 100% auto, cover;
   background-color: 82B3D3;
-  text-align: center;
   margin-bottom: 70px;
+}
+
+.promo-picture img {
+  margin: 0 auto;
 }
 
 .title {
@@ -127,7 +156,7 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   color: #000000;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .paragraph-text{
@@ -150,9 +179,9 @@ body {
 }
 
 .services-wrapper {
-  padding: 81px 85px;
+  margin: 81px 85px;
+  min-height: 385px;
 }
-
 
 .subtitle {
   font-size: 24px;
@@ -173,33 +202,40 @@ body {
 }
 
 .advantages-list-item {
-  background-color: #FFFFFF;
+  background-color: rgba(131, 179, 211, 0.12);
   width: 400px;
   display: flex;
   flex-direction: column;
   text-align: center;
+  min-height: 385px;
+}
+
+.advantages-list-item-center {
+  background-color: rgba(131, 179, 211, 0.2);    /*Как можно заменить прозрачность фона без RGBA?*/
 }
 
 .advantages-list-item-big {
   display: flex;
   flex-direction: row;
-  background-color: #82B3D3;
+  background-color: rgba(130, 179, 211, 1);
+  width: 1200px;
+}
+
+.advantages-list-item-big-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: rgba(130, 179, 211, 1);
   width: 1200px;
 }
 
 .wrapper-discription-big {
   display: flex;
   flex-direction: column;
-  margin: 102px 85px;
+  margin: auto 85px;
 }
 
 .wrapper-discription {
   margin: 112px 85px;
-}
-
-.advantages-list-item-center {
-  background-color: #83B3D3;    /*Как можно заменить прозрачность фона без RGBA?*/
-
 }
 
 .services-list {
@@ -213,13 +249,14 @@ body {
 
 .services-title {
   margin: 0;
-  padding: 64px 0 20px 0;
+  padding: 64px 0 0 0;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
   color: #000000;
+  margin-bottom: 20px;
 }
 
 .services-list-item {
@@ -238,7 +275,8 @@ body {
 }
 
 .order-title {
-  margin-top: 96px;
+  margin: 0;
+  padding-top: 96px;
 }
 
 .order-text {
@@ -246,15 +284,6 @@ body {
   line-height: 26px;
   text-align: center;
   margin: 20px 0 54px;
-}
-
-.button-big {
-  font-family: inherit;
-  font-size: 20px;
-  line-height: 36px;
-  color: #FFFFFF;
-  background-color: #756157;
-  font-weight: 700;
 }
 
 a {
@@ -276,7 +305,8 @@ a {
 
 .subscribe-title {
   color: #FFFFFF;
-  margin: 96px 0 20px;
+  padding-top: 96px;
+  margin: 0 0 20px;
 }
 
 .subscribe-description {
@@ -324,12 +354,15 @@ a {
 }
 
 .footer-logo {
-
   margin: auto 70px auto auto;
   width: 115px;
 }
 
 /*Каталог*/
+
+.catalog-header {
+  height: 64px;
+}
 
 .inner-header {
   background-image: url("../images/catalog-promo.png");
@@ -349,6 +382,7 @@ a {
   display: flex;
   list-style-type: none;
   background: green;
+  flex-wrap: wrap;
 }
 
 .sorting-controls-item {
@@ -371,6 +405,7 @@ a {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -405,6 +440,7 @@ a {
 }
 
 .button {
+  display: inline-block;
   font-family: "PT Sans", sans-serif;;
   font-size: 16px;
   font-weight: 700;
@@ -413,6 +449,16 @@ a {
   border-radius: 4px;
   padding: 8px 34px;
   color: #FFFFFF;
+}
+
+.button-big {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 36px;
+  color: #FFFFFF;
+  background-color: #756157;
+  font-weight: 700;
+  padding: 8px 50px;
 }
 
 .button-reset {
@@ -466,20 +512,6 @@ a {
   color: #000000;
 }
 
-.header-button {
-  display: block;
-  background-color: #756157;
-  border-radius: 4px;
-  margin: 14px 0 14px 20px;
-  padding: 8px 34px;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 .pagination {
   display: flex;
   flex-wrap: wrap;
@@ -504,9 +536,10 @@ a {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  width: 60px;
-  height: 60px;
-  padding: 12px 23px;
+  min-width: 60px;
+  min-height: 60px;
+  padding: 12px 20px;
+  text-align: center;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -523,7 +556,8 @@ a {
 
 .subscribe-title-catalog {
   color: #000000;
-  margin: 96px auto 0;
+  margin: 0 auto 0;
+  padding-top: 96px;
 }
 
 .subscribe-text {
@@ -536,7 +570,7 @@ a {
 
 .subscribe-form {
   text-align: center;
-  margin: 54px auto 104px;
+  margin: 0 auto 104px;
 }
 
 .subscribe-field::placeholder {
