@@ -163,6 +163,8 @@ body {
 
 .promo-picture img {
   margin: 0 auto;
+  padding-bottom: 80px;
+
 }
 
 .title {
@@ -939,16 +941,24 @@ width: 452px;
   outline: transparent;
 }
 
-  .icon-social-network:hover {
-  fill:red;
-  }
-
-
-/*
-.icon-social-network:focus, .icon-social-network:hover {
-  fill: red;
+.footer-button {
+  fill: rgba(131, 179, 211, 1);
+  stroke: rgba(131, 179, 211, 1);
 }
 
-.icon-social-network:active {
-  fill: rgba(104, 162, 202, 0.3);
-}*/
+.icon-footer-social {
+  fill: inherit;
+  stroke: inherit;
+}
+
+.footer-button:focus, .footer-button:hover {
+  fill: rgba(104, 162, 202, 1);
+  outline: transparent;
+}
+
+
+
+.footer-logo-link-svg {
+  fill: inherit;
+  stroke: inherit;
+}
