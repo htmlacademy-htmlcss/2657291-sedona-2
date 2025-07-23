@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -48,7 +52,6 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  flex-grow: 1;
 }
 
 .main-header {
@@ -109,8 +112,7 @@ body {
 
 .navigation-user {
   width: fit-content;
-  margin-right: 20px;
-  margin-left: auto;
+  margin-left: 280px;
 }
 
 .navigation-link {
@@ -128,7 +130,7 @@ body {
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 14px 140px 14px 0;
+  margin: 14px 0 14px 20px;
   cursor: pointer;
 }
 
@@ -204,6 +206,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 1200px;
+  overflow-wrap: break-word;
 }
 
 .subtitle {
@@ -374,16 +377,15 @@ outline: transparent;
 .page-footer {
   display: flex;
   width: 1200px;
-  margin: 0 auto;
   padding: 40px 70px 30px;
-  justify-content: space-around;
-
+  margin: 0 auto;
 }
 
 .footer-phone {
   width: 720px;
   text-align: center;
-  margin: 0;
+  margin-left: 195px;
+  margin-right: 195px;
 }
 
 .footer-phone-link {
@@ -426,7 +428,7 @@ outline: transparent;
   margin: 50px 70px 40px;
 }
 
-.sorting-controls {
+.sorting-controls-list {
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
@@ -454,9 +456,12 @@ outline: transparent;
   margin-right: 0;
 }
 
-.sorting-controls-item:focus {                         /*не работает*/
-  border: 2px solid rgba(104, 162, 202, 1);
-  border-radius: 4px;
+.sorting-controls-item:has(.sorting-link:focus) {
+  outline: 2px solid rgba(104, 162, 202, 1);
+}
+
+.sorting-link:focus {
+  outline: none;     /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/ /*не работает*/
 }
 
 .sorting-controls-item:hover, .sorting-controls-item:active  {
@@ -709,7 +714,7 @@ outline: transparent;
   margin-bottom: 16px;
 }
 
-.rating {
+.rating-section {
   display: flex;
   justify-content: space-between;
   grid-column: 2/-2;
@@ -717,18 +722,28 @@ outline: transparent;
   align-items: center;
 }
 
-
-.rating::before {
-  content: "";
-  position: relative;
-  background-image: url("../images/reiting.svg");
-  background-position: left center;
-  background-repeat: no-repeat;
-  width: 140px;
-  height: 37px;
+.rating-list {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
   align-items: center;
 }
 
+.rating-item {
+  width: 18px;
+  height: 17px;
+}
+
+.rating-button {
+  background-image: url("../images/rating1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 18px;
+  height: 17px;
+  border: none;
+  background-color: transparent;
+  padding: 0 3px 0 0;
+}
 
 .button-favourites {
   background-color: rgba(125, 181, 79, 1);
@@ -955,8 +970,6 @@ width: 452px;
   fill: rgba(104, 162, 202, 1);
   outline: transparent;
 }
-
-
 
 .footer-logo-link-svg {
   fill: inherit;
