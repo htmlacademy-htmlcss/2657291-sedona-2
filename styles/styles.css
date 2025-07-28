@@ -94,20 +94,18 @@ body {
   text-transform: capitalize;
   color: #000000;
   box-sizing: border-box;
-}
-
-.navigation-item {
   position: relative;
+  max-width: 125px;
 }
 
 .navigation-link-current::before {
   position: absolute;
   content: "";
-  width: 68px;
   height: 2px;
   background-color: rgba(117, 98, 87, 1);
   top: 60px;
-  left: 20%;
+  left: 15px;
+  right: 15px;
 }
 
 .navigation-user {
@@ -157,9 +155,9 @@ body {
   padding: 51px 0 25px 0;
   background-image: url("../images/lower-border.svg"), url("../images/promo-gory.jpg");
   background-repeat: no-repeat;
-  background-position: bottom, top;
+  background-position: center bottom, top;
   background-size: 100% auto, cover;
-  background-color: 82B3D3;
+  background-color: rgba(130, 179, 211, 1);
   margin-bottom: 70px;
 }
 
@@ -221,6 +219,34 @@ body {
 
 .subtitle-light {
   color: #FFFFFF;
+}
+
+.subtitle-icon::before {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.subtitle-icon-home {
+  background-image: url("../images/home.svg");
+  background-repeat: no-repeat;
+}
+
+.subtitle-icon-food {
+  background-image: url("../images/food.svg");
+  background-repeat: no-repeat;
+}
+
+.subtitle-icon-souvenir {
+  background-image: url("../images/souvenir.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .advantages-description-light {
@@ -521,6 +547,10 @@ outline: transparent;
   height: 16px;
 }
 
+
+/*  !!!!!!  Формы !!!!!!!!!!! */
+
+
 .catalog-filter {
   display: flex;
   margin: 40px 0 70px;
@@ -530,21 +560,230 @@ outline: transparent;
   margin-right: 70px;
 }
 
+.control {
+margin-bottom: 16px;
+}
+
+.control-input {
+  margin: 0;
+  padding: 8px 14px;
+  font: inherit;
+  font-weight: 700;
+  background-color: rgba(242, 242, 242, 1);
+  border: none;
+  border-radius: 4px;
+}
+
+.control-input:focus {
+  outline: 3px solid rgba(131, 179, 211, 1);
+  background-color: rgba(230, 230, 230, 1);
+}
+
+.control-input:hover {
+  outline: none;
+  background-color: rgba(230, 230, 230, 1);
+}
+
+.control-input:disabled {
+  outline: none;
+  background-color: rgba(119, 136, 153, 1);
+}
+
+.control-input::placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+.control-input-price {
+  width: 145px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; margin: 0;
+  -moz-appearance: textfield;
+}
+
+.catalog-filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Ползунок */
+.range {
+  margin-top: 32px;
+  position: relative;
+}
+
+.range-scale {
+  height: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: rgb(46, 44, 44);
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  border: transparent;
+  cursor: pointer;
+}
+
+.range-toggle:hover,
+.range-toggle:active  {
+  border: 3px solid rgba(131, 179, 211, 1);
+}
+
+.toggle-min {
+  left: -242px;
+  top: -8px;
+}
+
+.toggle-max {
+  right: 55px;
+  top: -8px;
+}
+/* !!Конец ползунок*/
+
+
+.catalog-input-price-wrapper {
+  display: flex;
+}
+
+.control-input-price:not(:last-child) {
+  margin-right: 2px;
+}
+
+.wrapper-button-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+  cursor: pointer;
+}
+
+/* Инфраструктура*/
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-price {
+  padding-left: 0;
+  position: relative;
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  left: 0;
+  top: 2px;
+}
+
+.control:hover .control-mark,
+.control:hover .control-label,
+.control:hover .control-mark-round {
+  opacity: 60%;
+}
+
+.control:focus .control-mark, .control:focus .control-mark-round {
+  border: 3px solid rgba(131, 179, 211, 1);
+  border-radius: 4px;
+}
+
+.control:active .control-mark,
+.control:active .control-label,
+.control:active .control-mark-round {
+  opacity: 30%;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {     /*цвет галочки в чекбоксе, создаем псевдоэлемент*/
+  position: absolute;
+  height: 2px;
+  background-color: rgba(63, 94, 114, 1);
+  content: "";
+  border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before  {       /*Галочка в чекбоксе*/
+  width: 8px;
+  transform: rotate(45deg);
+  top: 12px;
+  left: 3px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {         /*Галочка в чекбоксе*/
+  width: 12px;
+  transform: rotate(-45deg);
+  top: 10px;
+  left: 7px;
+}
+
+/*круг в радиокнопке*/
+
+.control-mark-round {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  left: 0;
+  top: 2px;
+}
+
+.control-input[type="radio"]:checked + .control-mark-round::before {     /*цвет галочки в чекбоксе, создаем псевдоэлемент*/
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: rgba(63, 94, 114, 1);
+  content: "";
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}                       /*круг в радиокнопке конец*/
+
+.signature {
+  font: inherit;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.5);
+  left: 115px;
+  top: 8px;
+}
+
+/*    !!!!!!   Конец ФОРМЫ   !!!!!!!!!!!!!*/
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .catalog-filter-title {
   font-size: 20px;
   line-height: 24px;
+  margin-bottom: 32px;
+  font-weight: 700;
 }
 
 .catalog-filter-item .control {
   line-height: 23px;
 }
 
-.wrapper-button {
-  display: flex;
-  flex-direction: column;
-  margin-top: 8px;
-  cursor: pointer;
-}
+
 
 .button {
   display: inline-block;
@@ -617,14 +856,20 @@ outline: transparent;
   display: flex;
   margin: 0;
   padding: 14px 20px;
+  padding-right: 48px;
   margin-right: 70px;
   border: 2px solid rgba(229, 229, 229, 1);
   border-radius: 4px;
   width: 290px;
   height: 50px;
   box-sizing: border-box;
+  font: inherit;
   align-self: center;
   color: rgba(51, 51, 51, 1);
+  background-image: url("../images/mark.svg");
+  background-position: center right 20px;
+  background-repeat: no-repeat;
+  appearance: none;
 }
 
 .select-control:focus, .select-control:hover  {

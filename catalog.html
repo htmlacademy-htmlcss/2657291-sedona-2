@@ -59,66 +59,87 @@
 
       <section class="catalog-services" data-test="filter">
         <h2 class="visually-hidden">Список услуг с фильтрами</h2>
+
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
+
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="swimming-pool" checked>
-                  Бассейн
+                  <input class="control-input visually-hidden" type="checkbox" name="swimming-pool" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Бассейн</span>
+                </label>
+              </li>
+
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input visually-hidden" type="checkbox" name="Parking-space" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Парковка</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="Parking-space" checked>
-                  Парковка
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="Wi-Fi">
-                  Wi-Fi
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Тип жилья:</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="product-group" value="hotels" checked>
-                  Гостиницы
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="product-group" value="motel">
-                  Мотель
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="product-group" value="Apartments">
-                  Апартаменты
+                  <input class="control-input visually-hidden" type="checkbox" name="Wi-Fi">
+                  <span class="control-mark"></span>
+                  <span class="control-label"> Wi-Fi</span>
                 </label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-            <label class="control">
-              <input class="control-input" type="text" name="price-from" placeholder="0">
-              от
-            </label>
-            <label class="control">
-              <input class="control-input" type="text" name="price-from" placeholder="9000">
-              до
-            </label>
+            <legend class="catalog-filter-title">Тип жилья:</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input visually-hidden" type="radio" name="product-group" value="hotels" checked>
+                  <span class="control-mark-round"></span>
+                  <span class="control-label">Гостиницы</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input visually-hidden" type="radio" name="product-group" value="motel">
+                  <span class="control-mark-round"></span>
+                  <span class="control-label">Мотель</span>
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input visually-hidden" type="radio" name="product-group" value="Apartments">
+                  <span class="control-mark-round"></span>
+                  <span class="control-label">Апартаменты</span>
+                </label>
+              </li>
+            </ul>
           </fieldset>
-          <div class="wrapper-button">
+
+          <fieldset class="catalog-filter-group catalog-filter-price">
+            <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+            <div class="catalog-input-price-wrapper">
+              <label class="control control-price" for="#input-from">
+                <span class="signature">от</span>
+              </label>
+              <input class="control-input control-input-price" type="number" name="price-from" id="input-from" placeholder="0">
+              <label class="control control-price" for="#input-up-to">
+                <span class="signature">до</span>
+              </label>
+              <input class="control-input control-input-price" type="number" name="price-from" id="input-up-to" placeholder="9000">
+            </div>
+            <div class="range">
+              <div class="range-scale">
+                <div class="range-bar" style="left: 82%; width: 20%;">
+                  <button class="range-toggle toggle-min" type="button"></button>
+                  <button class="range-toggle toggle-max" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="wrapper-button-form">
             <button class="button button-blue" type="submit">Применить</button>
             <button class="button button-reset" type="reset">Сбросить</button>
           </div>
