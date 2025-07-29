@@ -201,6 +201,70 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-auth">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="form-modal" action="https://echo.htmlacademy.ru/" method="get">
+            <p class="field-group field-group-start">
+              <label class="label-modal label-modal-start" for="#modal-input-start" >
+                <span class="inscription">Дата заезда:</span>
+              </label>
+              <input class="modal-input modal-input-start" type="date" id="modal-input-start" name="Check-in-date" required>
+              <p class="auxiliary-label auxiliary-label-color">Мы не можем отправить вас в прошлое.</p>
+            </p>
+
+            <p class="field-group field-group-finish">
+              <label class="label-modal label-modal-finish" for="#modal-input-finish" >
+                <span class="inscription">Дата выезда:</span>
+              </label>
+              <input class="modal-input" type="date" id="modal-input-finish" name="Check-out-date" required>
+              <p class="auxiliary-label">На эти даты есть свободные номера. Пока есть.</p>
+            </p>
+
+            <div class="container-modal-children-parent">
+              <div class="field-group-bottom field-group-bottom-left">
+                <p class="field-bottom-title">Взрослые:</p>
+                <div class="field-bottom-wrapper">
+                  <button class="button-modal-mini button-diminution" type="button">
+                    <span class="icon-button"></span>
+                  </button>
+                  <span class="output-window">2</span>
+                  <button class="button-modal-mini button-raising" type="button">
+                    <span class="icon-button icon-button-raising"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="field-group-bottom field-group-bottom-right">
+                <p class="field-bottom-title field-bottom-title-children">Дети:</p>
+                <svg class="svg-icon-children" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+                  </svg>
+                <span class="tooltip-open tooltip-close">
+                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                  Дети до 6 лет размещаются бесплатно.
+                </span>
+                <div class="field-bottom-wrapper">
+                  <button class="button-modal-mini button-diminution" type="button">
+                    <span class="icon-button"></span>
+                  </button>
+                  <span class="output-window">2</span>
+                  <button class="button-modal-mini button-raising" type="button">
+                    <span class="icon-button icon-button-raising"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="button-modal" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 
 </html>

@@ -60,7 +60,7 @@
       <section class="catalog-services" data-test="filter">
         <h2 class="visually-hidden">Список услуг с фильтрами</h2>
 
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get" name="form-catalog">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
@@ -104,7 +104,7 @@
                 <label class="control">
                   <input class="control-input visually-hidden" type="radio" name="product-group" value="motel">
                   <span class="control-mark-round"></span>
-                  <span class="control-label">Мотель</span>
+                  <span class="sorting-link">Мотель</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
@@ -123,11 +123,11 @@
               <label class="control control-price" for="#input-from">
                 <span class="signature">от</span>
               </label>
-              <input class="control-input control-input-price" type="number" name="price-from" id="input-from" placeholder="0">
+              <input class="control-input control-input-price" type="number" name="price-from" id="input-from" value="0">
               <label class="control control-price" for="#input-up-to">
                 <span class="signature">до</span>
               </label>
-              <input class="control-input control-input-price" type="number" name="price-from" id="input-up-to" placeholder="9000">
+              <input class="control-input control-input-price" type="number" name="price-from" id="input-up-to" value="9000">
             </div>
             <div class="range">
               <div class="range-scale">
@@ -149,7 +149,9 @@
 
     <section class="sorting" data-test="catalog">
       <div class="sorting-header">
-        <h2 class="sorting-search-title">Найдено гостиниц: 38</h2>
+        <h2 class="sorting-search-title">Найдено гостиниц:
+          <span>38</span>
+        </h2>
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Сначала популярные</option>
           <option value="cheap" selected>Сначала дешёвые</option>
