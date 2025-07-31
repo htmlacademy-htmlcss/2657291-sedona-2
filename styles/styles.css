@@ -29,6 +29,12 @@
   overflow: hidden;
 }
 
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   height: 100%;
 }
@@ -45,18 +51,44 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #FFFFFF;
+  background-color: rgba(242, 242, 242, 1);
   color: #333333;
+}
+
+.shell {
+  max-width: 1280px;
+  background-color: rgba(242, 242, 242, 1.0);
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+}
+
+.shell::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  margin: 0 auto;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.shell::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 32px;
+  height: 100%;
+  margin: 0 auto;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .main-header {
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 1);
   height: 64px;
 }
 
@@ -66,6 +98,7 @@ body {
   margin: 0 auto;
   align-items: center;
   padding: 0 70px;
+  justify-content: space-between;
 }
 
 .navigation-logo {
@@ -75,12 +108,8 @@ body {
 }
 
 .navigation-list {
-  margin: 0;
-  padding: 0;
-  width: 340px;
   display: flex;
   flex-wrap: wrap;
-  list-style-type: none;
 }
 
 .navigation-link {
@@ -96,6 +125,7 @@ body {
   box-sizing: border-box;
   position: relative;
   max-width: 125px;
+  min-width: 45px;
 }
 
 .navigation-link-current::before {
@@ -109,12 +139,7 @@ body {
 }
 
 .navigation-user {
-  width: fit-content;
-  margin-left: 280px;
-}
-
-.navigation-link {
-  min-width: 45px;
+  margin-left: auto;
 }
 
 .header-button {
@@ -128,7 +153,7 @@ body {
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 14px 0 14px 20px;
+  margin-left: 20px;
   cursor: pointer;
 }
 
@@ -145,6 +170,10 @@ body {
 
 /*main*/
 
+.promo {
+  background-color: rgba(255, 255, 255, 1);
+}
+
 .page-container {
   width: 1200px;
   margin: 0 auto;
@@ -153,12 +182,19 @@ body {
 .promo-picture {
   display: block;
   padding: 51px 0 25px 0;
-  background-image: url("../images/lower-border.svg"), url("../images/promo-gory.jpg");
+  background-image:
+  url("../images/lower-border.svg"),
+  url("../images/promo-gory.jpg");
   background-repeat: no-repeat;
-  background-position: center bottom, top;
-  background-size: 100% auto, cover;
+  background-position:
+  center bottom,
+  top;
+  background-size:
+  100% auto,
+  cover;
   background-color: rgba(130, 179, 211, 1);
   margin-bottom: 70px;
+  padding-bottom: 80px;
 }
 
 .promo-picture img {
@@ -175,6 +211,10 @@ body {
   color: #000000;
 }
 
+.promo-description {
+  margin-bottom: 21px;
+}
+
 .promo-title {
   margin: 0;
   text-align: center;
@@ -186,7 +226,7 @@ body {
   margin-bottom: 25px;
 }
 
-.paragraph-text{
+.promo-paragraph-text {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -195,10 +235,16 @@ body {
   padding-bottom: 70px;
 }
 
-.advantages-list {
+.services-paragraph-text {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+  text-align: center;
   margin: 0;
-  padding: 0;
-  list-style: none;
+  padding-bottom: 65px;
+}
+
+.advantages-list {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -207,6 +253,8 @@ body {
 }
 
 .subtitle {
+  position: relative;
+  top: -5px;
   font-size: 24px;
   line-height: 28px;
   color: #000000;
@@ -219,6 +267,31 @@ body {
 .subtitle-light {
   color: #FFFFFF;
 }
+
+.subtitle-strip {
+  padding-top: 10px;
+}
+
+.subtitle-strip::after {
+  content: "";
+  position: absolute;
+  top: 90px;
+  left: 85px;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.wrapper-discription-big .subtitle::after {
+  content: "";
+  position: absolute;
+  top: 85px;
+  left: 85px;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 
 .subtitle-icon::before {
   content: "";
@@ -248,6 +321,10 @@ body {
   background-position: center top;
 }
 
+.advantages-description {
+  margin: 55px 0 16px 0;
+}
+
 .advantages-description-light {
   color: #FFFFFF;
 }
@@ -258,7 +335,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  min-height: 385px;
+  max-height: 385px;
 }
 
 .advantages-list-item-center {
@@ -279,6 +356,10 @@ body {
   width: 1200px;
 }
 
+.services-list-item-text {
+  margin: 15px 0;
+}
+
 .wrapper-discription-big {
   display: flex;
   flex-direction: column;
@@ -286,13 +367,14 @@ body {
 }
 
 .wrapper-discription {
-  margin: 112px 85px;
+  padding: 110px 85px;
+}
+
+.services {
+background-color: rgba(255, 255, 255, 1);
 }
 
 .services-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -320,13 +402,18 @@ body {
 }
 
 .services-list-item-center {
-  background-color: rgb(250, 250, 250, 1);
+  background-color: rgb(255, 255, 255, 1);
 }
 
 .services-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.order {
+  background-color: rgba(255, 255, 255, 1);
+  padding-bottom: 96px;
 }
 
 .order-wrapper {
@@ -361,7 +448,6 @@ a {
   text-align: center;
   width: 1200px;
   height: 415px;
-  margin-top: 96px;
 }
 
 .subscribe-title {
@@ -400,17 +486,18 @@ outline: transparent;
   }
 
 .page-footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 1200px;
   padding: 40px 70px 30px;
   margin: 0 auto;
+  gap: 41.5px;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .footer-phone {
   width: 720px;
   text-align: center;
-  margin-left: 195px;
-  margin-right: 195px;
 }
 
 .footer-phone-link {
@@ -445,21 +532,18 @@ outline: transparent;
   background-size: cover;
   background-color: #82B3D3;
   color: #FFFFFF;
-  padding: 35px 70px 70px;
+  padding: 35px 70px 17px;
 }
 
 .sorting-header {
   display: flex;
-  margin: 50px 70px 40px;
+  margin: 35px 70px 20px;
 }
 
 .sorting-controls-list {
   display: flex;
-  list-style-type: none;
   flex-wrap: wrap;
-  margin: 0;
   align-content: center;
-  padding: 0;
 }
 
 .sorting-controls-item {
@@ -481,6 +565,10 @@ outline: transparent;
   margin-right: 0;
 }
 
+.sorting-link:focus {
+  outline: none;
+}
+
 .sorting-controls-item:has(.sorting-link:focus) {
   outline: 2px solid rgba(104, 162, 202, 1);
 }
@@ -500,9 +588,6 @@ outline: transparent;
 .breadcrumbs-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style: none;
   align-content: center;
 }
 
@@ -542,15 +627,31 @@ outline: transparent;
   height: 16px;
 }
 
-/*  !!!!!!  Формы !!!!!!!!!!! */
+/*Формы*/
+
+.catalog-services {
+  padding-bottom: 40px;
+}
 
 .catalog-filter {
   display: flex;
-  margin: 40px 0 70px;
+  margin: 40px 0 0;
 }
 
-.catalog-filter-group:not(:last-child) {
+.catalog-filter .catalog-filter-group:nth-child(1) {
   margin-right: 70px;
+}
+
+.catalog-filter .catalog-filter-group:nth-child(2) {
+  margin-right: 150px;
+}
+
+.catalog-filter .catalog-filter-group:nth-child(3) {
+  margin-right: 65px;
+}
+
+.catalog-filter-group-space {
+  margin-right: 150px;
 }
 
 .control {
@@ -573,6 +674,14 @@ cursor: pointer;
   background-color: rgba(230, 230, 230, 1);
 }
 
+.control-input[type="checkbox"]:focus + .control-mark {
+  outline: 3px solid rgba(131, 179, 211, 1);
+}
+
+.control-input[type="radio"]:focus + .control-mark-round {
+  outline: 3px solid rgba(131, 179, 211, 1);
+}
+
 .control-input:hover {
   outline: none;
   background-color: rgba(230, 230, 230, 1);
@@ -589,6 +698,7 @@ cursor: pointer;
 
 .control-input-price {
   width: 145px;
+  padding: 12px 20px;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -606,7 +716,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* Ползунок */
 .range {
-  margin-top: 32px;
+  margin-top: 45px;
   position: relative;
 }
 
@@ -632,9 +742,12 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
-.range-toggle:hover,
+.range-toggle:focus {
+  outline: 3px solid rgba(131, 179, 211, 1);
+}
+
 .range-toggle:active  {
-  border: 3px solid rgba(131, 179, 211, 1);
+  outline: 2px solid rgba(131, 179, 211, 1);
 }
 
 .toggle-min {
@@ -643,12 +756,11 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .toggle-max {
-  right: 55px;
+  right: 75px;
   top: -8px;
 }
 
-/* !!Конец ползунок*/
-
+/*Конец ползунок*/
 
 .catalog-input-price-wrapper {
   display: flex;
@@ -663,6 +775,11 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-direction: column;
   margin-top: 55px;
   cursor: pointer;
+}
+
+.wrapper-button-form .button-blue {
+  padding: 8px 50px;
+  margin-bottom: 25px;
 }
 
 /* Инфраструктура*/
@@ -689,12 +806,6 @@ input[type="number"]::-webkit-outer-spin-button {
   top: 2px;
 }
 
-/*.control:focus .control-mark,
-.control:focus .control-label,
-.control:focus .control-mark-round {                 не работает
-  opacity: 60%;
-}*/
-
 .control:hover .control-mark,
 .control:hover .control-label,
 .control:hover .control-mark-round {
@@ -708,7 +819,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before,
-.control-input[type="checkbox"]:checked + .control-mark::after {     /*цвет галочки в чекбоксе, создаем псевдоэлемент*/
+.control-input[type="checkbox"]:checked + .control-mark::after {
   position: absolute;
   height: 2px;
   background-color: rgba(63, 94, 114, 1);
@@ -716,21 +827,19 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 4px;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::before  {       /*Галочка в чекбоксе*/
+.control-input[type="checkbox"]:checked + .control-mark::before  {
   width: 8px;
   transform: rotate(45deg);
   top: 12px;
   left: 3px;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::after {         /*Галочка в чекбоксе*/
+.control-input[type="checkbox"]:checked + .control-mark::after {
   width: 12px;
   transform: rotate(-45deg);
   top: 10px;
   left: 7px;
 }
-
-/*круг в радиокнопке*/
 
 .control-mark-round {
   position: absolute;
@@ -743,7 +852,7 @@ input[type="number"]::-webkit-outer-spin-button {
   top: 2px;
 }
 
-.control-input[type="radio"]:checked + .control-mark-round::before {     /*цвет галочки в чекбоксе, создаем псевдоэлемент*/
+.control-input[type="radio"]:checked + .control-mark-round::before {
   position: absolute;
   height: 10px;
   width: 10px;
@@ -752,7 +861,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 50%;
   top: 5px;
   left: 5px;
-}                       /*круг в радиокнопке конец*/
+}
 
 .signature {
   font: inherit;
@@ -762,13 +871,7 @@ input[type="number"]::-webkit-outer-spin-button {
   top: 8px;
 }
 
-/*    !!!!!!   Конец ФОРМЫ   !!!!!!!!!!!!!*/
-
-.catalog-filter-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
+/*Конец ФОРМЫ*/
 
 .catalog-filter-title {
   font-size: 20px;
@@ -803,6 +906,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 700;
   padding: 8px 50px;
   cursor: pointer;
+  border: transparent;
 }
 
 .button-big:focus, .button-big:hover {
@@ -831,6 +935,11 @@ outline: transparent;
 .button-reset:hover {
   color: rgba(255, 255, 255, 1);
   opacity: 0.6;
+}
+
+.button-reset:active {
+  color: rgba(255, 255, 255, 0.3);
+  outline: transparent;
 }
 
 .button-blue {
@@ -870,7 +979,7 @@ outline: transparent;
 }
 
 .select-control:focus, .select-control:hover  {
-  border: 2px solid rgba(104, 162, 202, 1);
+  outline: 3px solid rgba(104, 162, 202, 1);
   border-radius: 4px;
 }
 
@@ -879,6 +988,8 @@ outline: transparent;
   line-height: 21px;
   color: rgba(51, 51, 51, 1);
   padding: 20px;
+  width: 290px;
+  overflow-wrap: break-word;
 }
 
 /*Карточки товаров*/
@@ -886,10 +997,9 @@ outline: transparent;
 .product-list {
   display: grid;
   grid-template-columns: 340px 340px 340px;
-  gap: 20px;
+  gap: 10px 20px;
   margin: 0;
   padding: 0 70px;
-  list-style-type: none;
   margin-bottom: 40px;
 }
 
@@ -910,6 +1020,13 @@ outline: transparent;
   column-gap: 20px;
   text-align: start;
   margin-bottom: 16px;
+}
+
+.rating  {
+  text-transform: uppercase;
+  padding:9px 18px;
+  background-color: rgba(242, 242, 242, 1);
+  border-radius: 4px;;
 }
 
 .product-card-title, .hotel, .rating {
@@ -961,14 +1078,13 @@ outline: transparent;
 
 .rating-list {
   display: flex;
-  padding: 0;
-  list-style-type: none;
   align-items: center;
 }
 
 .rating-item {
   width: 18px;
   height: 17px;
+  margin-right: 6px;
 }
 
 .rating-button {
@@ -1008,8 +1124,6 @@ outline: transparent;
 .pagination {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
   padding: 40px 70px 60px;
 }
 
@@ -1071,6 +1185,10 @@ outline: transparent;
   background-position: center;
 }
 
+.subscribe-catalog {
+  padding-bottom: 104px;
+}
+
 .subscribe-title-catalog {
   color: #000000;
   margin: 0 auto;
@@ -1089,7 +1207,7 @@ outline: transparent;
 .subscribe-form {
   display: flex;
   text-align: center;
-  margin: 0 auto 104px;
+  margin: 0 auto;
   justify-content: center;
 }
 
@@ -1113,7 +1231,19 @@ outline: transparent;
   padding: 8px 20px 12px;
   border: transparent;
   width: 452px;
+  border-radius: 4px;
   }
+
+.subscribe-field:focus {
+  outline: 3px solid rgba(131, 179, 211, 1);
+  background-color: rgba(230, 230, 230, 1);
+  border-radius: 4px;
+}
+
+.subscribe-field:hover {
+  background-color: rgba(230, 230, 230, 1);
+  outline: transparent;
+}
 
 .subscribe-field-catalog {
 background-color: rgba(242, 242, 242, 1);
@@ -1123,9 +1253,6 @@ width: 452px;
 }
 
 .footer-social-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
   display: flex;
 }
 
@@ -1193,6 +1320,13 @@ width: 452px;
 
 .footer-logo-link:focus, .footer-logo-link:hover {
   fill: rgba(117, 97, 87, 1);
+  stroke: rgba(117, 97, 87, 1);
+  outline: transparent;
+}
+
+.footer-logo-link:active {
+  fill: rgba(117, 97, 87, 0.3);
+  stroke: rgba(117, 97, 87, 0.3);
   outline: transparent;
 }
 
@@ -1208,6 +1342,13 @@ width: 452px;
 
 .footer-button:focus, .footer-button:hover {
   fill: rgba(104, 162, 202, 1);
+  stroke: rgba(104, 162, 202, 1);;
+  outline: transparent;
+}
+
+.footer-button:active {
+  fill: rgba(104, 162, 202, 0.3);
+  stroke: rgba(104, 162, 202, 0.3);
   outline: transparent;
 }
 
@@ -1225,11 +1366,12 @@ width: 452px;
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 0;
+  background-color: rgba(242, 242, 242, 0.8);
+  z-index: 10;
 }
 
-.modal-container-close {                                             /*Modal-wind*/
+.modal-container-close {                                                   
+  position: absolute;
   display: none;
 }
 
@@ -1274,23 +1416,38 @@ width: 452px;
 
 .modal-auth {
   width: 720px;
-  z-index: -1;
 }
 
 .modal-close-button {
   position: absolute;
   top: 64px;
   right: 52px;
-  width: 52px;
-  height: 52px;
-  background-color: rgba(255, 255, 255, 1);
-  background-image: url("../images/modal-close.svg");
-  background-repeat: no-repeat;
+  width: 54px;
+  height: 54px;
+  background-color: rgba(242, 242, 242, 1);
+  background-image: url("../images/krest-close.svg");
   background-position: center;
+  background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   border-radius: 30px;
+  text-align: center;
 }
+
+.modal-close-button:focus {
+  background-color: rgba(230, 230, 230, 1);
+  outline: 3px solid rgba(131, 179, 211, 1);
+}
+
+.modal-close-button:hover {
+  background-color: rgba(230, 230, 230, 1);
+}
+
+.modal-close-button:active {
+  outline: none;
+  opacity: 0.6;
+}
+
 
 .modal-title {
   text-transform: uppercase;
@@ -1315,6 +1472,9 @@ width: 452px;
   background-image: url("../images/date-icon.svg");
   background-position: right 22px center;
   background-repeat: no-repeat;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .modal-input:hover {
@@ -1335,7 +1495,7 @@ width: 452px;
   color: rgba(255, 87, 87, 1);
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {        /*скрывает иконку колендаря в input*/
+input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
 
@@ -1381,6 +1541,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {        /*скрывае�
 .icon-button {
   position: relative;
   display: block;
+  margin: auto;
   width: 14px;
   height: 2px;
   background-color: rgba(117, 97, 87, 0.3);
@@ -1397,7 +1558,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {        /*скрывае�
 }
 
 .output-window {
-  background-color: inherit;
+  background-color: transparent;
   padding: 14px 10px;
   font-weight: 700;
   display: flex;
@@ -1455,4 +1616,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {        /*скрывае�
   border-radius: 10px;
   border: none;
   margin-top: 48px;
+}
+
+.button-modal:focus,
+.button-modal:hover {
+  background-color: rgba(104, 162, 202, 1);
+  outline: transparent;
+}
+
+.button-modal:active {
+  color: rgba(255, 255, 255, 0.5);
 }
