@@ -59,26 +59,8 @@ body {
   max-width: 1280px;
   background-color: rgba(242, 242, 242, 1.0);
   margin: 0 auto;
-  padding: 0 40px;
   position: relative;
-}
-
-.shell::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  margin: 0 auto;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-}
-
-.shell::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 32px;
-  height: 100%;
-  margin: 0 auto;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -89,7 +71,7 @@ body {
 .main-header {
   color: #000000;
   background-color: rgba(255, 255, 255, 1);
-  height: 64px;
+  min-height: 64px;
 }
 
 .navigation {
@@ -464,6 +446,19 @@ a {
   margin: 0 0 54px;
 }
 
+.button {
+  display: inline-block;
+  font-family: "PT Sans", sans-serif;;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 8px 34px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
 .subscribe-button {
   font-family: inherit;
   font-size: 20px;
@@ -473,6 +468,7 @@ a {
   text-transform: uppercase;
   margin: 0;
   cursor: pointer;
+  border-radius: 0 4px 4px 0;
 }
 
 .subscribe-button:focus, .subscribe-button:hover  {
@@ -667,6 +663,24 @@ cursor: pointer;
   background-color: rgba(242, 242, 242, 1);
   border: none;
   border-radius: 4px;
+}
+
+.control-input {
+  margin: 0;
+  padding: 8px 14px;
+  font: inherit;
+  font-weight: 700;
+  background-color: rgba(242, 242, 242, 1);
+  border: none;
+  border-radius: 4px;
+}
+
+.catalog-input-price-wrapper input[type="number"]:nth-of-type(1) {
+  border-radius: 4px 0 0 4px;
+}
+
+.catalog-input-price-wrapper input[type="number"]:nth-of-type(2) {
+  border-radius: 0 4px 4px 0;
 }
 
 .control-input:focus {
@@ -868,7 +882,7 @@ input[type="number"]::-webkit-outer-spin-button {
   position: absolute;
   color: rgba(0, 0, 0, 0.5);
   left: 115px;
-  top: 8px;
+  top: 11px;
 }
 
 /*Конец ФОРМЫ*/
@@ -882,19 +896,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .catalog-filter-item .control {
   line-height: 23px;
-}
-
-.button {
-  display: inline-block;
-  font-family: "PT Sans", sans-serif;;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  padding: 8px 34px;
-  color: #FFFFFF;
-  cursor: pointer;
 }
 
 .button-big {
@@ -1223,21 +1224,20 @@ outline: transparent;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  vertical-align: middle;
-}
+  }
 
 .subscribe-field {
   background-color: rgba(242, 242, 242, 1);
-  padding: 8px 20px 12px;
+  padding: 10px 20px 10px;
   border: transparent;
   width: 452px;
-  border-radius: 4px;
+  border-radius: 4px 0 0 4px;
   }
 
 .subscribe-field:focus {
   outline: 3px solid rgba(131, 179, 211, 1);
   background-color: rgba(230, 230, 230, 1);
-  border-radius: 4px;
+  border-radius: 4px 0 0 4px;
 }
 
 .subscribe-field:hover {
@@ -1247,13 +1247,13 @@ outline: transparent;
 
 .subscribe-field-catalog {
 background-color: rgba(242, 242, 242, 1);
-padding: 8px 20px 12px;
 border: transparent;
 width: 452px;
 }
 
 .footer-social-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .user-link-search {
@@ -1320,13 +1320,11 @@ width: 452px;
 
 .footer-logo-link:focus, .footer-logo-link:hover {
   fill: rgba(117, 97, 87, 1);
-  stroke: rgba(117, 97, 87, 1);
   outline: transparent;
 }
 
 .footer-logo-link:active {
   fill: rgba(117, 97, 87, 0.3);
-  stroke: rgba(117, 97, 87, 0.3);
   outline: transparent;
 }
 
@@ -1370,7 +1368,7 @@ width: 452px;
   z-index: 10;
 }
 
-.modal-container-close {                                                   
+.modal-container-close {
   position: absolute;
   display: none;
 }
