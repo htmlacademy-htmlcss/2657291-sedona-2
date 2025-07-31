@@ -1,8 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Александр Волков](https://up.htmlacademy.ru/htmlcss-individual/2/user/2657291).
-* Наставник: `Неизвестно`.
-
+* Наставник: [Вячеслав Николаев](https://htmlacademy.ru/profile/slavka_piyavka).
+* Сайт [Мой проект седона](https://aleksander531.github.io/2657291-sedona-2/).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
