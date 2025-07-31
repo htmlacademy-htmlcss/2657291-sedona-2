@@ -71,7 +71,7 @@ body {
 .main-header {
   color: #000000;
   background-color: rgba(255, 255, 255, 1);
-  min-height: 64px;
+
 }
 
 .navigation {
@@ -519,7 +519,7 @@ outline: transparent;
 /*Каталог*/
 
 .catalog-header {
-  height: 64px;
+  min-height: 64px;
 }
 
 .inner-header {
@@ -1133,6 +1133,7 @@ outline: transparent;
   width: 60px;
   min-height: 60px;
   margin-right: 8px;
+  margin-bottom: 8px;
   text-align: center;
   border-radius: 4px;
 }
