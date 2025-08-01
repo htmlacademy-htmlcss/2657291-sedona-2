@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог гостиниц г.Седона</title>
   <link rel="stylesheet" href="styles/styles.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 </head>
 
 <body>
@@ -120,18 +122,18 @@
             <fieldset class="catalog-filter-group catalog-filter-price">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <div class="catalog-input-price-wrapper">
-                <label class="control control-price" for="#input-from">
+                <label class="control control-price" for="input-from">
                   <span class="signature">от</span>
                 </label>
                 <input class="control-input control-input-price" type="number" name="price-from" id="input-from" value="0">
-                <label class="control control-price" for="#input-up-to">
+                <label class="control control-price" for="input-up-to">
                   <span class="signature">до</span>
                 </label>
                 <input class="control-input control-input-price" type="number" name="price-from" id="input-up-to" value="9000">
               </div>
               <div class="range">
                 <div class="range-scale">
-                  <div class="range-bar" style="left: 82%; width: 20%;">
+                  <div class="range-bar" style="left: 75%; width: 25%;">
                     <button class="range-toggle toggle-min" type="button"></button>
                     <button class="range-toggle toggle-max" type="button"></button>
                   </div>
@@ -149,9 +151,7 @@
 
       <section class="sorting" data-test="catalog">
         <div class="sorting-header">
-          <h2 class="sorting-search-title">Найдено гостиниц:
-            <span>38</span>
-          </h2>
+          <h2 class="sorting-search-title">Найдено&nbsp;гостиниц:&nbsp;38&nbsp;</h2>
           <select class="select-control" aria-label="Сортировка">
             <option value="popular" style="width: 290px;">Сначала популярные</option>
             <option value="cheap" selected style="width: 290px;">Сначала дешёвые</option>
@@ -159,17 +159,17 @@
           </select>
           <ul class="sorting-controls-list list-reset">
             <li class="sorting-controls-item sorting-controls-item-current">
-              <a class="sorting-link display-all-cards" href="#">
+              <a class="sorting-link display-all-cards" href="catalog.html?view=tile">
                 <span class="visually-hidden">Показать карточки</span>
               </a>
             </li>
             <li class="sorting-controls-item">
-              <a href="#" class="sorting-link display-card">
+              <a class="sorting-link display-card" href="catalog.html?view=card">
                 <span class="visually-hidden">Показать карточку</span>
               </a>
             </li>
             <li class="sorting-controls-item">
-              <a href="#" class="sorting-link display-list-cards">
+              <a class="sorting-link display-list-cards" href="catalog.html?view=list">
                 <span class="visually-hidden">Показать список</span>
               </a>
             </li>
@@ -192,16 +192,16 @@
             <div class="rating-section">
               <ul class="rating-list list-reset">
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
               </ul>
               <p class="rating rating-4">Рейтинг: 8,5</p>
@@ -218,21 +218,21 @@
             </p>
             <div class="button-section">
               <a class="button button-brown" href="#">Подробнее</a>
-              <button class="button  button-favourites">В избранное</button>
+              <button class="button  button-favourites" type="button">В избранное</button>
             </div>
             <div class="rating-section">
               <ul class="rating-list list-reset">
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
               </ul>
               <p class="rating rating-4" >Рейтинг: 9,2</p>
@@ -249,18 +249,18 @@
             </p>
             <div class="button-section">
               <a class="button button-brown" href="#">Подробнее</a>
-              <button class="button button-blue">В избранное</button>
+              <button class="button button-blue" type="button">В избранное</button>
             </div>
             <div class="rating-section">
               <ul class="rating-list list-reset">
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
               </ul>
               <p class="rating rating-3">Рейтинг: 6,9</p>
@@ -277,15 +277,15 @@
             </p>
             <div class="button-section">
               <a class="button-brown button" href="#">Подробнее</a>
-              <button class="button button-blue">В избранное</button>
+              <button class="button button-blue" type="button">В избранное</button>
             </div>
             <div class="rating-section">
               <ul class="rating-list list-reset">
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
                 <li class="rating-item">
-                  <button class="rating-button"></button>
+                  <button class="rating-button" type="button"></button>
                 </li>
               </ul>
               <p class="rating rating-2">Рейтинг: 5,0</p>
@@ -294,8 +294,8 @@
         </ul>
 
         <ul class="pagination list-reset">
-          <li class="pagination-item pagination-item-current">
-            <a class="pagination-link pagination-current">1</a>
+          <li class="pagination-item-current">
+            <a class="pagination-current">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -317,6 +317,7 @@
       </section>
 
       <section class="subscribe-catalog" data-test="subscribe">
+        <h2 class="visually-hidden">Раздел с подпиской</h2>
         <p class="subscribe-title-catalog title">Подпишитесь на рассылку</p>
         <p class="subscribe-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" method="post" class="subscribe-form">
