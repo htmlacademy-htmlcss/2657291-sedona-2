@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог гостиниц г.Седона</title>
   <link rel="stylesheet" href="styles/styles.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 </head>
 
 <body>
@@ -149,9 +151,7 @@
 
       <section class="sorting" data-test="catalog">
         <div class="sorting-header">
-          <h2 class="sorting-search-title">Найдено гостиниц:
-            <span>38</span>
-          </h2>
+          <h2 class="sorting-search-title">Найдено&nbsp;гостиниц:&nbsp;38&nbsp;</h2>
           <select class="select-control" aria-label="Сортировка">
             <option value="popular" style="width: 290px;">Сначала популярные</option>
             <option value="cheap" selected style="width: 290px;">Сначала дешёвые</option>
@@ -159,17 +159,17 @@
           </select>
           <ul class="sorting-controls-list list-reset">
             <li class="sorting-controls-item sorting-controls-item-current">
-              <a class="sorting-link display-all-cards" href="#">
+              <a class="sorting-link display-all-cards" href="catalog.html?view=tile">
                 <span class="visually-hidden">Показать карточки</span>
               </a>
             </li>
             <li class="sorting-controls-item">
-              <a href="#" class="sorting-link display-card">
+              <a class="sorting-link display-card" href="catalog.html?view=card">
                 <span class="visually-hidden">Показать карточку</span>
               </a>
             </li>
             <li class="sorting-controls-item">
-              <a href="#" class="sorting-link display-list-cards">
+              <a class="sorting-link display-list-cards" href="catalog.html?view=list">
                 <span class="visually-hidden">Показать список</span>
               </a>
             </li>
@@ -294,8 +294,8 @@
         </ul>
 
         <ul class="pagination list-reset">
-          <li class="pagination-item pagination-item-current">
-            <a class="pagination-link pagination-current">1</a>
+          <li class="pagination-item-current">
+            <a class="pagination-current">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -317,6 +317,7 @@
       </section>
 
       <section class="subscribe-catalog" data-test="subscribe">
+        <h2 class="visually-hidden">Раздел с подпиской</h2>
         <p class="subscribe-title-catalog title">Подпишитесь на рассылку</p>
         <p class="subscribe-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" method="post" class="subscribe-form">
