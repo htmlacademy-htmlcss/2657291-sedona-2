@@ -133,9 +133,19 @@ body {
   right: 15px;
 }
 
+.navigation-link:hover {
+  color: rgba(117, 97, 87, 1);
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .navigation-user {
   justify-self: end;
   grid-column: 3/4;
+  align-self: start;
+  margin: 14px 0 10px;
 }
 
 .header-button {
@@ -144,7 +154,7 @@ body {
   border-radius: 4px;
   padding: 8px 34px;
   color: rgba(255, 255, 255, 1);
-  text-align: center;
+  align-self: start;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -419,7 +429,7 @@ background-color: rgba(255, 255, 255, 1);
   align-content: center;
 }
 
-.services-list-item-center {
+.services-list-item:nth-child(2n) {
   background-color: rgb(255, 255, 255, 1);
 }
 
@@ -793,14 +803,20 @@ input[type='number'] {
 
 .range-toggle:focus {
   outline: 3px solid rgba(131, 179, 211, 1);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .range-toggle:active  {
   outline: 2px solid rgba(131, 179, 211, 1);
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
 }
 
 .toggle-min {
-  left: -217px;
+  left: -219px;
   top: -8px;
 }
 
@@ -917,8 +933,6 @@ input[type='number'] {
   left: 115px;
   top: 11px;
 }
-
-/*Конец ФОРМЫ*/
 
 .catalog-filter-title {
   font-size: 20px;
@@ -1453,13 +1467,18 @@ width: 452px;
 }
 
 .button-modal-mini:focus {
-  background-color: rgba(229, 229, 229, 1);
-  outline: 3px solid rgba(131, 179, 211, 1);
+  outline: 3px solid rgba(130, 179, 211, 1);
   border-radius: 4px;
 }
 
-.button-modal-mini:hover {
-  background-color: rgba(229, 229, 229, 1);
+.button-modal-mini:hover::before,
+.button-raising:hover::after {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.button-modal-mini:active::before,
+.button-raising:active::after {
+  background-color: rgba(117, 97, 87, 0.3);
 }
 
 .field-group-bottom-right {
@@ -1528,6 +1547,9 @@ width: 452px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  box-sizing: border-box;
+  font-family: inherit;
+  letter-spacing: 0;
 }
 
 .modal-input:hover {
@@ -1541,7 +1563,8 @@ width: 452px;
 
 .auxiliary-label {
   font: inherit;
-  margin: 4px 0 23px 153px;
+  font-size: 16px;
+  margin: 4px 0 23px 158px;
 }
 
 .auxiliary-label-color {
@@ -1553,11 +1576,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .label-modal-start {
-  margin-right: 24px;
+  margin-right: 22px;
 }
 
 .label-modal-finish {
-  margin-right: 18px;
+  margin-right: 16px;
 }
 
 .inscription {
@@ -1570,7 +1593,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  margin-right: 10px;
+  margin: 12px 10px 12px 0;
+
 }
 
 .field-bottom-wrapper {
@@ -1590,26 +1614,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .button-modal-mini {
   background-color: rgb(242, 242, 242, 1);
-  min-width: 40px;
+  width: 40px;
   border: none;
-}
-
-.icon-button {
   position: relative;
-  display: block;
-  margin: auto;
-  width: 14px;
-  height: 2px;
-  background-color: rgba(117, 97, 87, 0.3);
 }
 
-.button-raising::before {
-  content:"";
+.button-modal-mini::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 12px;
+    height: 3px;
+    margin: auto;
+    background-color: rgba(117, 97, 87, 0.3);
+}
+
+.button-raising::after {
+  content: "";
   position: absolute;
-  top: 15px;
-  right: 19px;
-  width: 2px;
-  height: 14px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  height: 12px;
+  margin: auto;
   background-color: rgba(117, 97, 87, 0.3);
 }
 
@@ -1624,27 +1656,37 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .number-of-people {
   border: none;
   outline: none;
-  padding: 14px 8px;
+  padding: 14px 5px;
   font-size: 18px;
   font-family: inherit;
   line-height: 20px;
   font-weight: 700;
   background-color: rgba(242, 242, 242, 1);
-  margin: 0 4px;
-  min-width: 31px;
-  max-width: 45px;
+  margin: 0;
+  width: 31px;
   text-align: center;
+}
+
+.number-of-people::placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+.number-of-people:focus {
+  border-radius: 4px;
+  box-shadow:
+  inset 3px 3px 0 0 rgba(131, 179, 211, 1),
+  inset -3px -3px 0 0 rgba(131, 179, 211, 1);
 }
 
 .number-of-people:hover {
   background-color: rgba(229, 229, 229, 1);
 }
 
-.number-of-people:focus {
-  background-color: rgba(229, 229, 229, 1);
-  outline: 3px solid rgba(131, 179, 211, 1);
-  border-radius: 4px;
+.number-of-people:active {
+  background-color: rgba(242, 242, 242, 1);
+  box-shadow: none;
 }
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
