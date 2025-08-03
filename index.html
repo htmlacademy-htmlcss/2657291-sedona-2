@@ -188,7 +188,7 @@
           </div>
 
           <div class="footer-logo">
-            <a href="#" class="footer-logo-link footer-logo-link-main reset-link">
+            <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo-link footer-logo-link-main reset-link">
               <svg class="footer-logo-link-svg" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 13.2564V15.8564H2.5V13.2564H0Z"/>
                 <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z"/>
@@ -218,7 +218,7 @@
             <form class="form-modal" action="https://echo.htmlacademy.ru/" method="get">
               <div class="field-group field-group-start">
                 <label class="label-modal label-modal-start" for="modal-input-start" >
-                  <span class="inscription">Дата заезда:</span>
+                  <span class="inscription">Дата Заезда:</span>
                 </label>
                 <input class="modal-input modal-input-start" type="text" id="modal-input-start" name="Check-in-date" value="27 апреля 2020" placeholder="Укажите дату" required>
                 <p class="auxiliary-label auxiliary-label-color">Мы не можем отправить вас в прошлое.</p>
@@ -226,7 +226,7 @@
 
               <div class="field-group field-group-finish">
                 <label class="label-modal label-modal-finish" for="modal-input-finish" >
-                  <span class="inscription">Дата выезда:</span>
+                  <span class="inscription">Дата Выезда:</span>
                 </label>
                 <input class="modal-input" type="text" id="modal-input-finish" name="Check-out-date" value="1 сентября 2021" placeholder="Укажите дату" required>
                 <p class="auxiliary-label">На эти даты есть свободные номера. Пока есть.</p>
@@ -236,13 +236,11 @@
                 <div class="field-group-bottom field-group-bottom-left">
                   <p class="field-bottom-title">Взрослые:</p>
                   <div class="field-bottom-wrapper">
-                    <button class="button-modal-mini button-diminution" type="button">
-                      <span class="icon-button visually-hidden">Кнопка уменьшения</span>
+                    <button class="button-modal-mini button-diminution" type="button" aria-label="Уменьшить количество">
                     </button>
                     <label class="visually-hidden" for="number-of-persons-adult">Количество человек</label>
-                    <input class="number-of-people" type="number" id="number-of-persons-adult" name="number-people" value="2" min="0" max="999">
-                    <button class="button-modal-mini button-raising" type="button">
-                      <span class="icon-button icon-button-raising visually-hidden">Кнопка увеличения</span>
+                    <input class="number-of-people" type="number" id="number-of-persons-adult" name="number-people" maxlength="2" placeholder="2">
+                    <button class="button-modal-mini button-raising" type="button" aria-label="Увеличить количество">
                     </button>
                   </div>
                 </div>
@@ -257,13 +255,11 @@
                     Дети до 6 лет размещаются бесплатно.
                   </span>
                   <div class="field-bottom-wrapper">
-                    <button class="button-modal-mini button-diminution" type="button">
-                      <span class="icon-button visually-hidden">Кнопка уменьшения</span>
+                    <button class="button-modal-mini button-diminution" type="button" aria-label="Уменьшить количество">
                     </button>
                     <label class="visually-hidden" for="number-of-persons-kid">Количество человек</label>
-                    <input class="number-of-people" type="number" id="number-of-persons-kid" name="number-people" value="2" min="0" max="999">
-                    <button class="button-modal-mini button-raising" type="button">
-                      <span class="icon-button icon-button-raising visually-hidden">Кнопка увеличения</span>
+                    <input class="number-of-people" type="number" id="number-of-persons-kid" name="number-people" maxlength="2" placeholder="2">
+                    <button class="button-modal-mini button-raising" type="button" aria-label="Увеличить количество">
                     </button>
                   </div>
                 </div>
