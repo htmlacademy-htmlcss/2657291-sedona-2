@@ -61,10 +61,9 @@ body {
 
 .shell {
   width: 1200px;
-  background-color: rgba(242, 242, 242, 1.0);
   margin: 0 auto;
   position: relative;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -123,6 +122,7 @@ body {
   min-width: 45px;
 }
 
+
 .navigation-link-current::before {
   position: absolute;
   content: "";
@@ -133,11 +133,11 @@ body {
   right: 15px;
 }
 
-.navigation-link:hover {
+.navigation-link:hover:not(.navigation-link-current) {
   color: rgba(117, 97, 87, 1);
 }
 
-.navigation-link:active {
+.navigation-link:active:not(.navigation-link-current) {
   color: rgba(117, 97, 87, 0.3);
 }
 
@@ -191,7 +191,7 @@ body {
   padding: 51px 0 25px 0;
   background-image:
   url("../images/lower-border.svg"),
-  url("../images/promo-gory.jpg");
+  url("../images/promo-mountains.jpg");
   background-repeat: no-repeat;
   background-position:
   center bottom,
@@ -575,7 +575,8 @@ outline: transparent;
 .inner-header {
   background-image: url("../images/catalog-promo.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
+  background-size: 1200px 412px;
   background-color: #82B3D3;
   color: #FFFFFF;
   padding: 35px 70px 17px;
@@ -1297,7 +1298,11 @@ outline: transparent;
   border: transparent;
   width: 452px;
   border-radius: 4px 0 0 4px;
-  }
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
 
 .subscribe-field:focus {
   outline: 3px solid rgba(131, 179, 211, 1);
@@ -1327,10 +1332,20 @@ width: 452px;
   background-position: center;
 }
 
+.user-link-search:hover,
+.user-link-search:active {
+  opacity: 0.7;
+}
+
 .user-link-heart {
   background-image: url("../images/heart.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.user-link-heart:hover,
+.user-link-heart:active {
+  opacity: 0.7;
 }
 
 .user-link-heart::after {
@@ -1466,7 +1481,7 @@ width: 452px;
   align-items: center;
 }
 
-.button-modal-mini:focus {
+.button-modal-mini:focus:not(:active) {
   outline: 3px solid rgba(130, 179, 211, 1);
   border-radius: 4px;
 }
@@ -1594,7 +1609,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   line-height: 24px;
   font-weight: 700;
   margin: 12px 10px 12px 0;
-
 }
 
 .field-bottom-wrapper {
@@ -1629,7 +1643,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 12px;
     height: 3px;
     margin: auto;
-    background-color: rgba(117, 97, 87, 0.3);
+    background-color: rgba(214, 208, 205, 1);
 }
 
 .button-raising::after {
@@ -1642,7 +1656,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 3px;
   height: 12px;
   margin: auto;
-  background-color: rgba(117, 97, 87, 0.3);
+  background-color: rgba(214, 208, 205, 1);
 }
 
 .output-window {
@@ -1672,10 +1686,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .number-of-people:focus {
+  z-index: 1;
   border-radius: 4px;
-  box-shadow:
-  inset 3px 3px 0 0 rgba(131, 179, 211, 1),
-  inset -3px -3px 0 0 rgba(131, 179, 211, 1);
+  outline: 3px solid rgba(130, 179, 211, 1);
 }
 
 .number-of-people:hover {
